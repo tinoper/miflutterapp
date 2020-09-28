@@ -4,6 +4,7 @@
  
  ## Página de perfil
  
- ![Profile Page](/screenshots/ProfilePageAndroid.png) 
+Ejemplo de página de perfil básica con foto y formulario
  
+ ![Profile Page](/screenshots/ProfilePageAndroid.png)
  ![Profile Page](/screenshots/ProfilePageIphone.png)
