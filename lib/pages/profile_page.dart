@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:miflutterapp/utils/colors.dart';
 import 'package:miflutterapp/widgets/rounded_button.dart';
 
@@ -29,35 +30,50 @@ class _UserProfileState extends State<UserProfile> {
                 ),
               ),
             ),
-            //Avatar
+            //Text Name
             Positioned(
-              top: (size.height / 3) - 160,
-              left: size.width / 2 - 120,
+              width: size.width,
+              top: (size.height / 7),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Text('Raúl Fernandez', style: textTheme.headline4,),
-                  SizedBox(
-                    height: 60,
+                  Text(
+                    'Raúl Fernandez',
+                    style: textTheme.headline4,
                   ),
+                ],
+              ),
+            ),
+            //Avatar
+            Positioned(
+              width: size.width,
+              top: (size.height / 4),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  // Text(
+                  //   'Raúl Fernandez',
+                  //   style: textTheme.headline4,
+                  // ),
+                  // SizedBox(
+                  //   height: 60,
+                  // ),
                   CircleAvatar(
                     radius: 80,
                     backgroundImage: NetworkImage(
                         'https://images.unsplash.com/photo-1541647376583-8934aaf3448a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80'),
-                  ),
-                  SizedBox(
-                    height: 40,
                   ),
                 ],
               ),
             ),
             //Formulario con datos
             Positioned(
-              top: (size.height / 3) + 120,
+              top: (size.height / 2),
               left: 40,
               right: 40,
               child: Form(
                 child: Column(
+                  mainAxisSize: MainAxisSize.max,
                   children: [
                     Container(
                       width: size.width,
@@ -111,12 +127,12 @@ class _UserProfileState extends State<UserProfile> {
                         readOnly: true,
                       ),
                     ),
-                    SizedBox(
-                      height: 50,
-                    ),
-                    RoundedButton(
-                      text: "Cerrar sesión",
-                      press: () {},
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: RoundedButton(
+                        text: "Cerrar sesión",
+                        press: () {},
+                      ),
                     ),
                   ],
                 ),
