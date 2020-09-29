@@ -14,24 +14,28 @@ ThemeData buildMyAppTheme() {
     primaryColor: primaryColor,
     accentColor: secondaryColor,
     scaffoldBackgroundColor: backGroundColor,
-iconTheme: base.iconTheme.copyWith(color: Colors.red,),
-    inputDecorationTheme: base.inputDecorationTheme.copyWith(fillColor: Colors.red),
-
+    iconTheme: base.iconTheme.copyWith(
+      color: Colors.red,
+    ),
+    inputDecorationTheme:
+        base.inputDecorationTheme.copyWith(fillColor: Colors.red),
     textTheme: _buildMyAppTextTheme(base.textTheme),
+    // Si es necesario usar otro color que el secundario para el FAB
+    // floatingActionButtonTheme:
+    //     FloatingActionButtonThemeData(backgroundColor: primaryColor),
   );
 }
 
 TextTheme _buildMyAppTextTheme(TextTheme base) {
   return base
       .copyWith(
-    // Usada en titulo de pantalla Login
+        // Usada en titulo de pantalla Login
         headline6: base.headline6.copyWith(
           fontWeight: FontWeight.bold,
           color: fontColor,
         ),
         subtitle1: base.subtitle1.copyWith(
           fontSize: 20,
-
         ),
         bodyText1: base.bodyText1.copyWith(),
         bodyText2: base.bodyText2.copyWith(),
