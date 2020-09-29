@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miflutterapp/pages/login_page.dart';
+import 'package:miflutterapp/pages/profile_page.dart';
 import 'package:miflutterapp/utils/my_app_theme.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: buildMyAppTheme(),
-      home: LoginPage(),
+      home: UserProfile(),
     );
   }
 }

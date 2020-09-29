@@ -21,3 +21,4 @@ doc/api/
 *.js.map
 /.dart_tool/
 /.idea/
+/screenshots/
