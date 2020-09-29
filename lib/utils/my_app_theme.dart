@@ -20,6 +20,9 @@ ThemeData buildMyAppTheme() {
     inputDecorationTheme:
         base.inputDecorationTheme.copyWith(fillColor: Colors.red),
     textTheme: _buildMyAppTextTheme(base.textTheme),
+    // Si es necesario usar otro color que el secundario para el FAB
+    // floatingActionButtonTheme:
+    //     FloatingActionButtonThemeData(backgroundColor: primaryColor),
   );
 }
 
