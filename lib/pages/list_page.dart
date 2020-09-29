@@ -17,11 +17,13 @@ class _ListPageState extends State<ListPage> {
       appBar: AppBar(
         title: Text('Jugadores'),
       ),
-      body: ListView.builder(
-        itemCount: players.length,
-        itemBuilder: (context, int index) {
-          return buildPlayer(players[index]);
-        },
+      body: SafeArea(
+        child: ListView.builder(
+          itemCount: players.length,
+          itemBuilder: (context, int index) {
+            return buildPlayer(players[index]);
+          },
+        ),
       ),
     );
   }
