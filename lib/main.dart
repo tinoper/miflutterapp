@@ -14,7 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: buildMyAppTheme(),
-      home: UserProfile(),
+      // Ir a página de autenticación
+      home: LoginPage(),
+      // Ir a página de perfil de usuario
+      //home: UserProfile(),
+      // Ir a Listado de jugadores con acceso a formulario de ingreso
+      //home: ListPage();
     );
   }
 }
