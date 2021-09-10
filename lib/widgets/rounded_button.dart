@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:miflutterapp/utils/colors.dart';
+import 'package:flutter/rendering.dart';
+import 'package:miflutterapp/ui_params/colors.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;
   final Function press;
   final Color color, textColor;
+
   const RoundedButton({
     Key key,
     this.text,
@@ -19,16 +21,18 @@ class RoundedButton extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
       width: size.width * 0.8,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(29),
-        child: FlatButton(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-          color: color,
-          onPressed: press,
-          child: Text(
-            text,
-            style: TextStyle(color: textColor),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          //fixedSize: _buttonDesktopScreenSize(context),
+          shape: new RoundedRectangleBorder(
+            borderRadius: new BorderRadius.circular(size.width * 0.10),
           ),
+        ),
+        onPressed: press,
+        child: Text(
+          text,
+          style: TextStyle(color: textColor, fontSize: 16),
         ),
       ),
     );

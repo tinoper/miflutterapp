@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:miflutterapp/utils/colors.dart';
+import 'package:miflutterapp/ui_params/colors.dart';
 import 'package:miflutterapp/widgets/rounded_button.dart';
 
 class UserProfile extends StatefulWidget {
