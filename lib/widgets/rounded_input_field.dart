@@ -19,11 +19,11 @@ class RoundedInputField extends StatelessWidget {
     return TextFieldContainer(
       child: TextField(
         onChanged: onChanged,
-        cursorColor: primaryColor,
+        cursorColor: MiFlutterAppColors.primaryColor,
         decoration: InputDecoration(
           icon: Icon(
             icon,
-            color: primaryColor,
+            color: MiFlutterAppColors.primaryColor,
             //TODO icon size
           ),
           hintText: hintText,

@@ -23,7 +23,7 @@ class _UserProfileState extends State<UserProfile> {
             Container(
               height: size.height / 3,
               decoration: BoxDecoration(
-                color: primaryColor,
+                color: MiFlutterAppColors.primaryColor,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(25),
                   bottomRight: Radius.circular(25),

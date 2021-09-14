@@ -18,7 +18,7 @@ class TextFieldContainer extends StatelessWidget {
       height: size.height * 0.06,
       width: size.width * 0.8,
       decoration: BoxDecoration(
-        color: primaryColorLight,
+        color: MiFlutterAppColors.primaryColorLight,
         //TODO parametrizar borderRadius en MiFlutterAppSizes
         borderRadius: const BorderRadius.all(Radius.circular(29)),
       ),

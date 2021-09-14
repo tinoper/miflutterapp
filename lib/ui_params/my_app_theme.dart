@@ -6,20 +6,20 @@ import 'colors.dart';
 
 ThemeData buildMyAppTheme() {
   final ColorScheme colorScheme = const ColorScheme.light().copyWith(
-    primary: primaryColor,
-    secondary: secondaryColor,
+    primary: MiFlutterAppColors.primaryColor,
+    secondary: MiFlutterAppColors.secondaryColor,
   );
 
   final ThemeData base = ThemeData.light();
   return base.copyWith(
-    primaryColor: primaryColor,
-    backgroundColor: secondaryColor,
+    primaryColor: MiFlutterAppColors.primaryColor,
+    backgroundColor: MiFlutterAppColors.secondaryColor,
     //canvasColor: white,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     colorScheme: colorScheme,
 
     ///accentColor es el color secundario.Usualmente se usa en tab activo, input text con foco, checkedboxes,etc
-    accentColor: secondaryColor,
+    accentColor: MiFlutterAppColors.secondaryColor,
     appBarTheme: _buildMyAppBarTheme(),
     //scaffoldBackgroundColor: backGroundColor,
     iconTheme: base.iconTheme.copyWith(
@@ -40,7 +40,7 @@ TextTheme _buildMyAppTextTheme(TextTheme base) {
         // Usada en titulo de pantalla Login
         headline6: base.headline6.copyWith(
           fontWeight: FontWeight.bold,
-          color: fontColor,
+          color: MiFlutterAppColors.fontColor,
         ),
         headline4: base.headline6.copyWith(
           fontWeight: FontWeight.bold,
@@ -49,7 +49,7 @@ TextTheme _buildMyAppTextTheme(TextTheme base) {
         subtitle1: base.subtitle1.copyWith(
           fontSize: MiFlutterAppSizes.miFlutterAppHintTextSize,
           fontWeight: FontWeight.w300,
-          color: fontColor,
+          color: MiFlutterAppColors.fontColor,
         ),
         subtitle2: base.subtitle2.copyWith(
           fontSize: MiFlutterAppSizes.miFlutterAppHintTextSize,
@@ -61,10 +61,10 @@ TextTheme _buildMyAppTextTheme(TextTheme base) {
         caption: base.caption.copyWith(
           fontWeight: FontWeight.w400,
           fontSize: 20,
-          color: fontColor,
+          color: MiFlutterAppColors.fontColor,
         ),
         button: base.button.copyWith(
-          color: secondaryColor,
+          color: MiFlutterAppColors.secondaryColor,
         ),
       )
       .apply(fontFamily: 'Roboto');
@@ -73,6 +73,6 @@ TextTheme _buildMyAppTextTheme(TextTheme base) {
 AppBarTheme _buildMyAppBarTheme() {
   return AppBarTheme(
     elevation: 4.0,
-    color: primaryColor,
+    color: MiFlutterAppColors.primaryColor,
   );
 }

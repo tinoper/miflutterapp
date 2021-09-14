@@ -54,7 +54,8 @@ class LoginPage extends StatelessWidget {
                 children: [
                   Text(
                     "Don’t have an Account ? ",
-                    style: textTheme.caption.copyWith(color: primaryColor),
+                    style: textTheme.caption
+                        .copyWith(color: MiFlutterAppColors.primaryColor),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -68,7 +69,7 @@ class LoginPage extends StatelessWidget {
                     child: Text(
                       "Sign Up",
                       style: textTheme.caption.copyWith(
-                        color: primaryColor,
+                        color: MiFlutterAppColors.primaryColor,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

@@ -11,7 +11,7 @@ class RoundedButton extends StatelessWidget {
     Key key,
     this.text,
     this.press,
-    this.color = primaryColor,
+    this.color = MiFlutterAppColors.primaryColor,
     this.textColor = Colors.white,
   }) : super(key: key);
 
