@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:miflutterapp/models/player.dart';
+import 'package:miflutterapp/ui_params/colors.dart';
+import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
 
 Widget buildPlayer(Player player) {
   return GestureDetector(
@@ -10,34 +12,42 @@ Widget buildPlayer(Player player) {
       print('Ofrecer borrar el item de ${player.lastName}');
     },
     child: Card(
-      elevation: 10,
+      elevation: MiFlutterAppSizes.playerCardElevation,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(MiFlutterAppSizes.playerCardPadding),
         child: Column(
           children: [
-            //Foto y nombre
             Row(
               children: <Widget>[
+                /// playerRanking
                 Container(
                   alignment: Alignment.center,
-                  width: 50,
+                  width: MiFlutterAppSizes.playerRankingSpace,
                   child: Text(
                     player.singlesRank.toString(),
-                    style: TextStyle(fontSize: 24, color: Colors.red),
+                    style: TextStyle(
+                        fontSize: MiFlutterAppSizes.t3,
+                        color: MiFlutterAppColors.primaryColor),
                     softWrap: true,
                   ),
                 ),
+
+                /// playerPhoto
                 CircleAvatar(
-                  radius: 20,
+                  radius: MiFlutterAppSizes.avatar5,
                   backgroundImage: AssetImage('assets/images/${player.image}'),
                   // SvgPicture.asset('assets/images/${player.image}'),
                 ),
+                SizedBox(
+                  width: MiFlutterAppSizes.smallSpace * 2,
+                ),
+
+                /// playerName
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.only(left: 10),
                     child: Text(
                       player.lastName + ", " + player.firstName,
-                      style: TextStyle(fontSize: 24),
+                      style: TextStyle(fontSize: MiFlutterAppSizes.t3),
                     ),
                   ),
                 ),
@@ -46,9 +56,12 @@ Widget buildPlayer(Player player) {
             //Otros datos
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 100),
-                  child: Text('Último resultado: 6-2 6-3 '),
+                SizedBox(
+                  width: MiFlutterAppSizes.spaceLeftLastScorePlayerCard,
+                ),
+                Text(
+                  'Último resultado: 6-2 6-3 ',
+                  style: TextStyle(fontSize: MiFlutterAppSizes.t7),
                 ),
               ],
             ),
