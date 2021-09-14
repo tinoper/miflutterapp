@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miflutterapp/ui_params/colors.dart';
+import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
 
 class TextFieldContainer extends StatelessWidget {
   final Widget child;
@@ -10,19 +11,22 @@ class TextFieldContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-      //TODO Parametrizar para que sea mas responsive por defecto
-      height: size.height * 0.06,
-      width: size.width * 0.8,
+      //alignment: Alignment.center,
+      //margin: EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.symmetric(
+        horizontal: MiFlutterAppSizes.normalInputFieldPadding,
+      ),
+      height: MiFlutterAppSizes.normalInputFieldHeight,
+      width: MiFlutterAppSizes.normalInputFieldWidth,
       decoration: BoxDecoration(
         color: MiFlutterAppColors.primaryColorLight,
-        //TODO parametrizar borderRadius en MiFlutterAppSizes
-        borderRadius: const BorderRadius.all(Radius.circular(29)),
+        borderRadius: const BorderRadius.all(
+            Radius.circular(MiFlutterAppSizes.borderRadiusInputField)),
       ),
-      child: child,
+      child: Align(
+        child: child,
+      ),
     );
   }
 }

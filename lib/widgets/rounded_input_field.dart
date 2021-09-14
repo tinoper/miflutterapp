@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miflutterapp/ui_params/colors.dart';
+import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
 
 import 'text_field_container.dart';
 
@@ -24,7 +25,7 @@ class RoundedInputField extends StatelessWidget {
           icon: Icon(
             icon,
             color: MiFlutterAppColors.primaryColor,
-            //TODO icon size
+            size: MiFlutterAppSizes.iconSize,
           ),
           hintText: hintText,
           border: InputBorder.none,

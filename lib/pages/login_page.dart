@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:miflutterapp/pages/list_page.dart';
 import 'package:miflutterapp/ui_params/colors.dart';
+import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
 import 'package:miflutterapp/widgets/rounded_button.dart';
 import 'package:miflutterapp/widgets/rounded_input_field.dart';
 import 'package:miflutterapp/widgets/rounded_password_field.dart';
@@ -34,8 +35,14 @@ class LoginPage extends StatelessWidget {
                 hintText: "Your Email",
                 onChanged: (value) {},
               ),
+              SizedBox(
+                height: MiFlutterAppSizes.normalSpace,
+              ),
               RoundedPasswordField(
                 onChanged: (value) {},
+              ),
+              SizedBox(
+                height: MiFlutterAppSizes.normalSpace,
               ),
               RoundedButton(
                 text: "LOGIN",

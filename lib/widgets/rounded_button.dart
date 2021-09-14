@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:miflutterapp/ui_params/colors.dart';
+import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;
@@ -12,27 +13,29 @@ class RoundedButton extends StatelessWidget {
     this.text,
     this.press,
     this.color = MiFlutterAppColors.primaryColor,
-    this.textColor = Colors.white,
+    this.textColor = MiFlutterAppColors.white,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      width: size.width * 0.8,
+      height: MiFlutterAppSizes.normalButtonHeight,
+      width: MiFlutterAppSizes.normalButtonWidth,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          elevation: 0,
-          //fixedSize: _buttonDesktopScreenSize(context),
+          elevation: MiFlutterAppSizes.normalElevation,
           shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(size.width * 0.10),
+            borderRadius:
+                new BorderRadius.circular(MiFlutterAppSizes.borderRadiusButton),
           ),
         ),
         onPressed: press,
         child: Text(
           text,
-          style: TextStyle(color: textColor, fontSize: 16),
+          style: TextStyle(
+            color: textColor,
+            fontSize: MiFlutterAppSizes.normalButtonText,
+          ),
         ),
       ),
     );
