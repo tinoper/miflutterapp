@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
+
 import 'colors.dart';
 
 ThemeData buildMyAppTheme() {
@@ -9,11 +12,16 @@ ThemeData buildMyAppTheme() {
 
   final ThemeData base = ThemeData.light();
   return base.copyWith(
+    primaryColor: primaryColor,
+    backgroundColor: secondaryColor,
+    //canvasColor: white,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     colorScheme: colorScheme,
-    primaryColor: primaryColor,
+
+    ///accentColor es el color secundario.Usualmente se usa en tab activo, input text con foco, checkedboxes,etc
     accentColor: secondaryColor,
-    scaffoldBackgroundColor: backGroundColor,
+    appBarTheme: _buildMyAppBarTheme(),
+    //scaffoldBackgroundColor: backGroundColor,
     iconTheme: base.iconTheme.copyWith(
       color: Colors.red,
     ),
@@ -39,7 +47,12 @@ TextTheme _buildMyAppTextTheme(TextTheme base) {
           color: Colors.white,
         ),
         subtitle1: base.subtitle1.copyWith(
-          fontSize: 16,
+          fontSize: MiFlutterAppSizes.miFlutterAppHintTextSize,
+          fontWeight: FontWeight.w300,
+          color: fontColor,
+        ),
+        subtitle2: base.subtitle2.copyWith(
+          fontSize: MiFlutterAppSizes.miFlutterAppHintTextSize,
           fontWeight: FontWeight.w300,
         ),
         bodyText1: base.bodyText1.copyWith(),
@@ -47,7 +60,7 @@ TextTheme _buildMyAppTextTheme(TextTheme base) {
         // Usada pantalla Login, al preguntar si no tiene cuenta
         caption: base.caption.copyWith(
           fontWeight: FontWeight.w400,
-          fontSize: 14.0,
+          fontSize: 20,
           color: fontColor,
         ),
         button: base.button.copyWith(
@@ -55,4 +68,11 @@ TextTheme _buildMyAppTextTheme(TextTheme base) {
         ),
       )
       .apply(fontFamily: 'Roboto');
+}
+
+AppBarTheme _buildMyAppBarTheme() {
+  return AppBarTheme(
+    elevation: 4.0,
+    color: primaryColor,
+  );
 }

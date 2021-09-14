@@ -24,12 +24,12 @@ class RoundedInputField extends StatelessWidget {
           icon: Icon(
             icon,
             color: primaryColor,
-            //color: primaryColor,
+            //TODO icon size
           ),
           hintText: hintText,
           border: InputBorder.none,
         ),
-        style: TextStyle(fontSize: 16),
+        //Style->TextTheme.subtitle1 but Color doesn't works
       ),
     );
   }

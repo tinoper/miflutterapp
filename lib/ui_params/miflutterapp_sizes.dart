@@ -1,10 +1,13 @@
-class EthharSizes {
-  EthharSizes._();
+class MiFlutterAppSizes {
+  MiFlutterAppSizes._();
+
+  //AppBar
+  //TODO appBar Elevation
 
   //Text Sizes
 
   static const double miFlutterAppTitleFontSize = 45;
-  static const double miFlutterAppHintTextSize = 20;
+  static const double miFlutterAppHintTextSize = 16;
 
   //Icon Sizes
 
