@@ -3,6 +3,7 @@ import 'package:miflutterapp/models/player.dart';
 import 'package:miflutterapp/ui_params/colors.dart';
 import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
 
+//TODO change to class
 Widget buildPlayer(Player player) {
   return GestureDetector(
     onTap: () {
@@ -36,7 +37,6 @@ Widget buildPlayer(Player player) {
                 CircleAvatar(
                   radius: MiFlutterAppSizes.avatar5,
                   backgroundImage: AssetImage('assets/images/${player.image}'),
-                  // SvgPicture.asset('assets/images/${player.image}'),
                 ),
                 SizedBox(
                   width: MiFlutterAppSizes.smallSpace * 2,

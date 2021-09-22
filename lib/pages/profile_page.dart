@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:miflutterapp/ui_params/colors.dart';
+import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
 import 'package:miflutterapp/widgets/rounded_button.dart';
 
 class UserProfile extends StatefulWidget {
@@ -10,8 +11,12 @@ class UserProfile extends StatefulWidget {
 }
 
 class _UserProfileState extends State<UserProfile> {
+  List<String> genderList = ['Masculino', 'Femenino', 'No binario'];
+  String _gender;
+
   @override
   Widget build(BuildContext context) {
+    print('gender selected $_gender');
     final TextTheme textTheme = Theme.of(context).textTheme;
     Size size = MediaQuery.of(context).size;
     return Scaffold(
@@ -25,8 +30,10 @@ class _UserProfileState extends State<UserProfile> {
               decoration: BoxDecoration(
                 color: MiFlutterAppColors.primaryColor,
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(25),
-                  bottomRight: Radius.circular(25),
+                  bottomLeft: Radius.circular(
+                      MiFlutterAppSizes.borderRadiusProfileCard),
+                  bottomRight: Radius.circular(
+                      MiFlutterAppSizes.borderRadiusProfileCard),
                 ),
               ),
             ),
@@ -51,15 +58,8 @@ class _UserProfileState extends State<UserProfile> {
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  // Text(
-                  //   'Raúl Fernandez',
-                  //   style: textTheme.headline4,
-                  // ),
-                  // SizedBox(
-                  //   height: 60,
-                  // ),
                   CircleAvatar(
-                    radius: 80,
+                    radius: MiFlutterAppSizes.avatarProfilePage,
                     backgroundImage: NetworkImage(
                         'https://images.unsplash.com/photo-1541647376583-8934aaf3448a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80'),
                   ),
@@ -80,59 +80,108 @@ class _UserProfileState extends State<UserProfile> {
                       child: TextFormField(
                         controller: TextEditingController(text: "12/07/1987"),
                         decoration: InputDecoration(
-                          labelStyle: TextStyle(color: Colors.orange),
+                          labelStyle:
+                              TextStyle(color: MiFlutterAppColors.primaryColor),
                           labelText: 'Fecha de nacimiento',
                         ),
                         readOnly: true,
                       ),
                     ),
+                    SizedBox(
+                      height: MiFlutterAppSizes.normalSpace,
+                    ),
                     Container(
                       width: size.width,
-                      margin: EdgeInsets.only(
-                        top: 10,
-                      ),
                       child: TextFormField(
                         controller: TextEditingController(
                             text: "rfernandez86@gmail.com"),
                         decoration: InputDecoration(
-                          labelStyle: TextStyle(color: Colors.orange),
+                          labelStyle:
+                              TextStyle(color: MiFlutterAppColors.primaryColor),
                           labelText: 'Email',
                         ),
                         readOnly: true,
                       ),
                     ),
+                    SizedBox(
+                      height: MiFlutterAppSizes.normalSpace,
+                    ),
                     Container(
                       width: size.width,
-                      margin: EdgeInsets.only(
-                        top: 10,
-                      ),
                       child: TextFormField(
                         controller:
                             TextEditingController(text: "+598 2424 5858"),
                         decoration: InputDecoration(
-                          labelStyle: TextStyle(color: Colors.orange),
+                          labelStyle:
+                              TextStyle(color: MiFlutterAppColors.primaryColor),
                           labelText: 'Teléfono',
                         ),
                         readOnly: true,
                       ),
                     ),
-                    Container(
-                      width: size.width,
-                      child: TextFormField(
-                        controller: TextEditingController(text: "Masculino"),
-                        decoration: InputDecoration(
-                          labelStyle: TextStyle(color: Colors.orange),
-                          labelText: 'Genéro',
-                        ),
-                        readOnly: true,
-                      ),
+                    SizedBox(
+                      height: MiFlutterAppSizes.normalSpace,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: RoundedButton(
-                        text: "Cerrar sesión",
-                        press: () {},
+                    DropdownButtonFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(29),
+                          ),
+                        ),
+                        //filled: true,
+                        hintStyle: TextStyle(
+                          color: MiFlutterAppColors.fontColor,
+                          fontFamily: 'DIN_NEXT_ROUNDED_LT_W01',
+                          fontWeight: FontWeight.w100,
+                          fontSize: MiFlutterAppSizes.miFlutterAppHintTextSize,
+                        ),
+                        fillColor: Colors.white,
                       ),
+                      isExpanded: true,
+                      //isDense: height > width ? false : true,
+                      //itemHeight: height > width ? height * 0.03 : 0,
+                      hint: Align(
+                        alignment: Alignment.center,
+                        child: FittedBox(
+                          child: Text(
+                            "Seleccione una opción",
+                            style: TextStyle(
+                              color: MiFlutterAppColors.primaryColor,
+                              // fontFamily: 'DIN_NEXT_ROUNDED_LT_W01',
+                              // fontWeight: FontWeight.w100,
+                              // fontSize: MiFlutterAppSizes.t3,
+                            ),
+                          ),
+                        ),
+                      ),
+                      onChanged: (String newValue) {
+                        setState(() {
+                          _gender = newValue;
+                        });
+                      },
+                      items: genderList.map((String val) {
+                        return DropdownMenuItem(
+                          value: val,
+                          child: Center(
+                            child: Text(
+                              val,
+                              style: TextStyle(
+                                color: MiFlutterAppColors.fontColor,
+                                //fontWeight: FontWeight.w100,
+                                //fontSize: MiFlutterAppSizes.t3,
+                              ),
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                    SizedBox(
+                      height: MiFlutterAppSizes.normalSpace,
+                    ),
+                    RoundedButton(
+                      text: "Cerrar sesión",
+                      press: () {},
                     ),
                   ],
                 ),

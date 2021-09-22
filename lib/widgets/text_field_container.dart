@@ -12,7 +12,7 @@ class TextFieldContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //alignment: Alignment.center,
+      alignment: Alignment.center,
       //margin: EdgeInsets.symmetric(vertical: 10),
       padding: EdgeInsets.symmetric(
         horizontal: MiFlutterAppSizes.normalInputFieldPadding,
@@ -24,9 +24,7 @@ class TextFieldContainer extends StatelessWidget {
         borderRadius: const BorderRadius.all(
             Radius.circular(MiFlutterAppSizes.borderRadiusInputField)),
       ),
-      child: Align(
-        child: child,
-      ),
+      child: child,
     );
   }
 }
