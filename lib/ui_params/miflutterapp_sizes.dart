@@ -62,5 +62,5 @@ class MiFlutterAppSizes {
   static const double avatar5 = 20.0;
 
   /// double avatarProfilePage = 80.0;
-  static const double avatarProfilePage = 80.0;
+  static const double avatarProfilePage = 60.0;
 }
