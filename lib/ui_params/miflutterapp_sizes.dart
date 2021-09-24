@@ -14,7 +14,7 @@ class MiFlutterAppSizes {
   static const double t5 = 16;
   static const double t7 = 12;
   //Icon Sizes
-  static const double iconSize = 20;
+  static const double iconSize = 24;
 
   //Some spacings
   static const double smallSpace = 5.0;
@@ -39,6 +39,7 @@ class MiFlutterAppSizes {
   //BorderRadius
   static const double borderRadiusInputField = 29;
   static const double borderRadiusButton = 29;
+  static const double borderRadiusProfileCard = 29;
 
   //Card Sizes
 
@@ -59,4 +60,7 @@ class MiFlutterAppSizes {
 
   /// double avatar5 = 20.0;
   static const double avatar5 = 20.0;
+
+  /// double avatarProfilePage = 80.0;
+  static const double avatarProfilePage = 60.0;
 }

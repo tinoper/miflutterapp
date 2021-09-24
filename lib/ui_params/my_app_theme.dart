@@ -42,29 +42,39 @@ TextTheme _buildMyAppTextTheme(TextTheme base) {
           fontWeight: FontWeight.bold,
           color: MiFlutterAppColors.fontColor,
         ),
-        headline4: base.headline6.copyWith(
+        headline4: base.headline4.copyWith(
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
+        //TextFormField, TextField
         subtitle1: base.subtitle1.copyWith(
           fontSize: MiFlutterAppSizes.miFlutterAppHintTextSize,
           fontWeight: FontWeight.w300,
           color: MiFlutterAppColors.fontColor,
         ),
+
         subtitle2: base.subtitle2.copyWith(
-          fontSize: MiFlutterAppSizes.miFlutterAppHintTextSize,
+          //fontSize: MiFlutterAppSizes.miFlutterAppHintTextSize,
           fontWeight: FontWeight.w300,
         ),
+
         bodyText1: base.bodyText1.copyWith(),
-        bodyText2: base.bodyText2.copyWith(),
+        //Text Widget
+        bodyText2: base.bodyText2.copyWith(
+          fontSize: MiFlutterAppSizes.t7,
+          color: MiFlutterAppColors.primaryColor,
+        ),
+
         // Usada pantalla Login, al preguntar si no tiene cuenta
         caption: base.caption.copyWith(
           fontWeight: FontWeight.w400,
           fontSize: 20,
           color: MiFlutterAppColors.fontColor,
         ),
+        //ElevatedButton
         button: base.button.copyWith(
           color: MiFlutterAppColors.secondaryColor,
+          fontSize: MiFlutterAppSizes.normalButtonText,
         ),
       )
       .apply(fontFamily: 'Roboto');

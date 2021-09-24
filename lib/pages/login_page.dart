@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:miflutterapp/pages/list_page.dart';
-import 'package:miflutterapp/ui_params/colors.dart';
 import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
 import 'package:miflutterapp/widgets/rounded_button.dart';
 import 'package:miflutterapp/widgets/rounded_input_field.dart';
@@ -21,16 +20,18 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               SizedBox(height: size.height * 0.08),
-              Text(
-                "LOGIN",
-                style: textTheme.headline6,
-              ),
+              // Text(
+              //   "LOGIN",
+              //   style: textTheme.headline6,
+              // ),
               SizedBox(height: size.height * 0.03),
               SvgPicture.asset(
                 "assets/icons/login.svg",
                 height: size.height * 0.35,
               ),
-              SizedBox(height: size.height * 0.03),
+              SizedBox(
+                height: MiFlutterAppSizes.normalSpace,
+              ),
               RoundedInputField(
                 hintText: "Your Email",
                 onChanged: (value) {},
@@ -61,8 +62,6 @@ class LoginPage extends StatelessWidget {
                 children: [
                   Text(
                     "Don’t have an Account ? ",
-                    style: textTheme.caption
-                        .copyWith(color: MiFlutterAppColors.primaryColor),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -75,8 +74,7 @@ class LoginPage extends StatelessWidget {
                     },
                     child: Text(
                       "Sign Up",
-                      style: textTheme.caption.copyWith(
-                        color: MiFlutterAppColors.primaryColor,
+                      style: textTheme.bodyText2.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
