@@ -1,3 +1,4 @@
+import 'package:auto_route/src/router/auto_router_x.dart';
 import 'package:flutter/material.dart';
 import 'package:miflutterapp/pages/list_page.dart';
 import 'package:miflutterapp/widgets/common/app_bar.dart';
@@ -11,10 +12,10 @@ class FormPlayer extends StatefulWidget {
 class _FormPlayerState extends State<FormPlayer> {
   final _formKey = GlobalKey<FormState>();
 
-  TextEditingController _nombreController;
-  TextEditingController _apellidoController;
-  TextEditingController _edadController;
-  TextEditingController _dniController;
+  TextEditingController? _nombreController;
+  TextEditingController? _apellidoController;
+  TextEditingController? _edadController;
+  TextEditingController? _dniController;
 
   @override
   void initState() {
@@ -43,7 +44,7 @@ class _FormPlayerState extends State<FormPlayer> {
                 controller: _nombreController,
                 decoration: InputDecoration(labelText: 'Nombres'),
                 validator: (value) {
-                  if (value.isEmpty) {
+                  if (value!.isEmpty) {
                     return 'Ingresar nombres';
                   } else {
                     return null;
@@ -54,7 +55,7 @@ class _FormPlayerState extends State<FormPlayer> {
                 controller: _apellidoController,
                 decoration: InputDecoration(labelText: 'Apellidos'),
                 validator: (value) {
-                  if (value.isEmpty) {
+                  if (value!.isEmpty) {
                     return 'Ingresar apellidos';
                   } else {
                     return null;
@@ -88,11 +89,12 @@ class _FormPlayerState extends State<FormPlayer> {
               RoundedButton(
                 text: 'Ingresar jugador',
                 press: () {
-                  if (_formKey.currentState.validate()) {
+                  if (_formKey.currentState!.validate()) {
                     print(
-                        'El jugador ${_nombreController.text} ha sido ingresado');
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (BuildContext context) => ListPage()));
+                        'El jugador ${_nombreController!.text} ha sido ingresado');
+                    context.router.pushNamed('/ListPage');
+                    // Navigator.of(context).push(MaterialPageRoute(
+                    //     builder: (BuildContext context) => ListPage()));
                   }
                 },
               ),
