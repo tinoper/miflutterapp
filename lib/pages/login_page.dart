@@ -1,3 +1,4 @@
+import 'package:auto_route/src/router/auto_router_x.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:miflutterapp/pages/list_page.dart';
@@ -48,12 +49,13 @@ class LoginPage extends StatelessWidget {
               RoundedButton(
                 text: "LOGIN",
                 press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ListPage(),
-                    ),
-                  );
+                  context.router.pushNamed('/ListPage');
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => ListPage(),
+                  //   ),
+                  // );
                 },
               ),
               SizedBox(height: size.height * 0.03),
@@ -65,16 +67,17 @@ class LoginPage extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ListPage(),
-                        ),
-                      );
+                      context.router.pushNamed('/ListPage');
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => ListPage(),
+                      //   ),
+                      // );
                     },
                     child: Text(
                       "Sign Up",
-                      style: textTheme.bodyText2.copyWith(
+                      style: textTheme.bodyText2?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),

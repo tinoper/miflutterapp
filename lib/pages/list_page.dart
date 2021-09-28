@@ -1,3 +1,4 @@
+import 'package:auto_route/src/router/auto_router_x.dart';
 import 'package:flutter/material.dart';
 import 'package:miflutterapp/Repository/players_repository.dart';
 import 'package:miflutterapp/models/player.dart';
@@ -23,12 +24,13 @@ class _ListPageState extends State<ListPage> {
           IconButton(
             icon: Icon(Icons.account_circle),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => UserProfile(),
-                ),
-              );
+              context.router.pushNamed('/UserProfile');
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => UserProfile(),
+              //   ),
+              // );
             },
           ),
         ],
@@ -46,8 +48,9 @@ class _ListPageState extends State<ListPage> {
           Icons.add,
         ),
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (BuildContext context) => FormPlayer()));
+          context.router.pushNamed('/FormPlayer');
+          // Navigator.of(context).push(MaterialPageRoute(
+          //     builder: (BuildContext context) => FormPlayer()));
         },
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:auto_route/src/router/auto_router_x.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -12,8 +13,8 @@ class UserProfile extends StatefulWidget {
 
 class _UserProfileState extends State<UserProfile> {
   List<String> genderList = ['Masculino', 'Femenino', 'No binario'];
-  String _gender;
-  double tempMargin;
+  String _gender = '';
+  double tempMargin = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -166,9 +167,9 @@ class _UserProfileState extends State<UserProfile> {
                             ),
                           ),
                         ),
-                        onChanged: (String newValue) {
+                        onChanged: (String? newValue) {
                           setState(() {
-                            _gender = newValue;
+                            _gender = newValue!;
                           });
                         },
                         items: genderList.map((String val) {
@@ -192,7 +193,9 @@ class _UserProfileState extends State<UserProfile> {
                       ),
                       RoundedButton(
                         text: "Cerrar sesión",
-                        press: () {},
+                        press: () {
+                          context.router.pushNamed('/');
+                        },
                       ),
                     ],
                   ),

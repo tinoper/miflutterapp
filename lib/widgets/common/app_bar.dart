@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MiAppBar extends StatefulWidget implements PreferredSizeWidget {
   MiAppBar({
-    @required this.title,
+    required this.title,
     this.menuItem = const [],
   });
 

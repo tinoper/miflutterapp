@@ -5,13 +5,13 @@ import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;
-  final Function press;
+  final VoidCallback press;
   final Color color, textColor;
 
   const RoundedButton({
-    Key key,
-    this.text,
-    this.press,
+    Key? key,
+    required this.text,
+    required this.press,
     this.color = MiFlutterAppColors.primaryColor,
     this.textColor = MiFlutterAppColors.white,
   }) : super(key: key);
