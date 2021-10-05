@@ -1,11 +1,11 @@
-import 'package:auto_route/src/router/auto_router_x.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:miflutterapp/pages/list_page.dart';
-import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
-import 'package:miflutterapp/widgets/rounded_button.dart';
-import 'package:miflutterapp/widgets/rounded_input_field.dart';
-import 'package:miflutterapp/widgets/rounded_password_field.dart';
+import 'package:miflutterapp/locator.dart';
+import 'package:miflutterapp/routes/router.gr.dart';
+import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
+import 'package:miflutterapp/presentation/widgets/rounded_button.dart';
+import 'package:miflutterapp/presentation/widgets/rounded_input_field.dart';
+import 'package:miflutterapp/presentation/widgets/rounded_password_field.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -21,10 +21,6 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               SizedBox(height: size.height * 0.08),
-              // Text(
-              //   "LOGIN",
-              //   style: textTheme.headline6,
-              // ),
               SizedBox(height: size.height * 0.03),
               SvgPicture.asset(
                 "assets/icons/login.svg",
@@ -48,15 +44,7 @@ class LoginPage extends StatelessWidget {
               ),
               RoundedButton(
                 text: "LOGIN",
-                press: () {
-                  context.router.pushNamed('/ListPage');
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => ListPage(),
-                  //   ),
-                  // );
-                },
+                press: () => _navigateToListPage(),
               ),
               SizedBox(height: size.height * 0.03),
               Row(
@@ -66,15 +54,7 @@ class LoginPage extends StatelessWidget {
                     "Don’t have an Account ? ",
                   ),
                   GestureDetector(
-                    onTap: () {
-                      context.router.pushNamed('/ListPage');
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => ListPage(),
-                      //   ),
-                      // );
-                    },
+                    onTap: () => _navigateToSignUp(),
                     child: Text(
                       "Sign Up",
                       style: textTheme.bodyText2?.copyWith(
@@ -89,5 +69,14 @@ class LoginPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  _navigateToListPage() {
+    locator<AppRouter>().pushNamed('/ListPage');
+  }
+
+  _navigateToSignUp() {
+    //TODO implement SignUpPage
+    print('TODO implement SignUpPage and remove this line');
   }
 }

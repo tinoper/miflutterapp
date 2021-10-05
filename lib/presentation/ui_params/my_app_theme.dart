@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
+import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
 
 import 'colors.dart';
 

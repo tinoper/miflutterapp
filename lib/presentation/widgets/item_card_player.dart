@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:miflutterapp/models/player.dart';
-import 'package:miflutterapp/ui_params/colors.dart';
-import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
+import 'package:miflutterapp/presentation/ui_params/colors.dart';
+import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
 
 //TODO change to class
 Widget buildPlayer(Player player) {

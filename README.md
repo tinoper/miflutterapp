@@ -30,13 +30,13 @@ Como esto es un trabajo en construcción paso a listar lo implementado y por imp
  
   :white_check_mark: Navegación : auto_route
 
+  :white_check_mark: Inyección de dependencias : get_it
+
 ❎ Splash Screen
 
 ❎ formz
 
 ❎ flutter_bloc
-
-❎ get_it
 
 ❎ Testing
 

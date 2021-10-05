@@ -1,11 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:miflutterapp/ui_params/colors.dart';
-import 'package:miflutterapp/widgets/text_field_container.dart';
+import 'package:miflutterapp/presentation/ui_params/colors.dart';
+import 'text_field_container.dart';
 
-class RoundedPasswordField extends StatelessWidget {
+class RoundedInputField extends StatelessWidget {
+  final String hintText;
+  final IconData icon;
   final ValueChanged<String> onChanged;
-  const RoundedPasswordField({
+  const RoundedInputField({
     Key? key,
+    required this.hintText,
+    this.icon = Icons.person,
     required this.onChanged,
   }) : super(key: key);
 
@@ -13,21 +18,17 @@ class RoundedPasswordField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextField(
-        obscureText: true,
         onChanged: onChanged,
         cursorColor: MiFlutterAppColors.primaryColor,
         decoration: InputDecoration(
-          hintText: "Password",
           icon: Icon(
-            Icons.lock,
+            icon,
             color: MiFlutterAppColors.primaryColor,
           ),
-          suffixIcon: Icon(
-            Icons.visibility,
-            color: MiFlutterAppColors.primaryColor,
-          ),
+          hintText: hintText,
           border: InputBorder.none,
         ),
+        //Style->TextTheme.subtitle1 but Color doesn't works
       ),
     );
   }

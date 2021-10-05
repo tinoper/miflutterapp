@@ -1,10 +1,11 @@
-import 'package:auto_route/src/router/auto_router_x.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:miflutterapp/ui_params/colors.dart';
-import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
-import 'package:miflutterapp/widgets/rounded_button.dart';
+import 'package:miflutterapp/locator.dart';
+import 'package:miflutterapp/routes/router.gr.dart';
+import 'package:miflutterapp/presentation/ui_params/colors.dart';
+import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
+import 'package:miflutterapp/presentation/widgets/rounded_button.dart';
 
 class UserProfile extends StatefulWidget {
   @override
@@ -193,9 +194,7 @@ class _UserProfileState extends State<UserProfile> {
                       ),
                       RoundedButton(
                         text: "Cerrar sesión",
-                        press: () {
-                          context.router.pushNamed('/');
-                        },
+                        press: () => _navigateToLogin(),
                       ),
                     ],
                   ),
@@ -206,5 +205,9 @@ class _UserProfileState extends State<UserProfile> {
         ),
       ),
     );
+  }
+
+  _navigateToLogin() {
+    locator<AppRouter>().pushNamed('/');
   }
 }

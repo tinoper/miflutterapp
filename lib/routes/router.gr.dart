@@ -7,10 +7,10 @@
 import 'package:auto_route/auto_route.dart' as _i5;
 import 'package:flutter/material.dart' as _i6;
 
-import '../pages/form_page.dart' as _i4;
-import '../pages/list_page.dart' as _i2;
-import '../pages/login_page.dart' as _i1;
-import '../pages/profile_page.dart' as _i3;
+import '../presentation/pages/form_page.dart' as _i4;
+import '../presentation/pages/list_page.dart' as _i2;
+import '../presentation/pages/login_page.dart' as _i1;
+import '../presentation/pages/profile_page.dart' as _i3;
 
 class AppRouter extends _i5.RootStackRouter {
   AppRouter([_i6.GlobalKey<_i6.NavigatorState>? navigatorKey])
