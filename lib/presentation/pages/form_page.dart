@@ -1,8 +1,8 @@
-import 'package:auto_route/src/router/auto_router_x.dart';
 import 'package:flutter/material.dart';
-import 'package:miflutterapp/pages/list_page.dart';
-import 'package:miflutterapp/widgets/common/app_bar.dart';
-import 'package:miflutterapp/widgets/rounded_button.dart';
+import 'package:miflutterapp/locator.dart';
+import 'package:miflutterapp/routes/router.gr.dart';
+import 'package:miflutterapp/presentation/widgets/common/app_bar.dart';
+import 'package:miflutterapp/presentation/widgets/rounded_button.dart';
 
 class FormPlayer extends StatefulWidget {
   @override
@@ -92,9 +92,7 @@ class _FormPlayerState extends State<FormPlayer> {
                   if (_formKey.currentState!.validate()) {
                     print(
                         'El jugador ${_nombreController!.text} ha sido ingresado');
-                    context.router.pushNamed('/ListPage');
-                    // Navigator.of(context).push(MaterialPageRoute(
-                    //     builder: (BuildContext context) => ListPage()));
+                    _navigateToListPage();
                   }
                 },
               ),
@@ -103,5 +101,9 @@ class _FormPlayerState extends State<FormPlayer> {
         ),
       ),
     );
+  }
+
+  _navigateToListPage() {
+    locator<AppRouter>().pushNamed('/ListPage');
   }
 }

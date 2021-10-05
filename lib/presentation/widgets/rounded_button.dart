@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:miflutterapp/ui_params/colors.dart';
-import 'package:miflutterapp/ui_params/miflutterapp_sizes.dart';
+import 'package:miflutterapp/presentation/ui_params/colors.dart';
+import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;

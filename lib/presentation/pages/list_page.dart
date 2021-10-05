@@ -1,11 +1,10 @@
-import 'package:auto_route/src/router/auto_router_x.dart';
 import 'package:flutter/material.dart';
 import 'package:miflutterapp/Repository/players_repository.dart';
+import 'package:miflutterapp/locator.dart';
 import 'package:miflutterapp/models/player.dart';
-import 'package:miflutterapp/pages/form_page.dart';
-import 'package:miflutterapp/pages/profile_page.dart';
-import 'package:miflutterapp/widgets/common/app_bar.dart';
-import 'package:miflutterapp/widgets/item_card_player.dart';
+import 'package:miflutterapp/routes/router.gr.dart';
+import 'package:miflutterapp/presentation/widgets/common/app_bar.dart';
+import 'package:miflutterapp/presentation/widgets/item_card_player.dart';
 
 class ListPage extends StatefulWidget {
   @override
@@ -24,13 +23,7 @@ class _ListPageState extends State<ListPage> {
           IconButton(
             icon: Icon(Icons.account_circle),
             onPressed: () {
-              context.router.pushNamed('/UserProfile');
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => UserProfile(),
-              //   ),
-              // );
+              _navigateToUserProfile();
             },
           ),
         ],
@@ -47,12 +40,16 @@ class _ListPageState extends State<ListPage> {
         child: Icon(
           Icons.add,
         ),
-        onPressed: () {
-          context.router.pushNamed('/FormPlayer');
-          // Navigator.of(context).push(MaterialPageRoute(
-          //     builder: (BuildContext context) => FormPlayer()));
-        },
+        onPressed: () => _navigateToFormPlayer(),
       ),
     );
+  }
+
+  void _navigateToUserProfile() {
+    locator<AppRouter>().pushNamed('/UserProfile');
+  }
+
+  void _navigateToFormPlayer() {
+    locator<AppRouter>().pushNamed('/FormPlayer');
   }
 }
