@@ -22,3 +22,4 @@ doc/api/
 /.dart_tool/
 /.idea/
 /screenshots/
+*.pbxproj
