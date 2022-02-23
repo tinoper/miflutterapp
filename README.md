@@ -32,7 +32,7 @@ Como esto es un trabajo en construcción paso a listar lo implementado y por imp
 
   :white_check_mark: Inyección de dependencias : get_it
 
-❎ Splash Screen
+  :white_check_mark: Splash Screen
 
 ❎ formz
 
