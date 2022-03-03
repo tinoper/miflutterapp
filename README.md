@@ -1,9 +1,15 @@
 # MiFlutterApp
  
-El objetivo de este proyecto es servir de apoyo a a charlas, ayudas y pruebas.
+Es una consulta reiterada en los grupos de Flutter sobre como estructurar un proyecto sobre todo 
+al principio en los primeros proyectos. Por eso este proyecto va a mantener algunas propuestas 
+para esos casos de primeros proyectos.
+
+El objetivo de este proyecto es servir de apoyo a a charlas, ayudas y pruebas para la comunidad de Flutter.
  
-De momento mantendremos dos niveles, uno para principiantes y otro con los paquetes
-que entiendo son básicos para una app que deba mantener listado, formulario, login, perfil de usuario.
+ ## Características de la app
+ La app está compuesta de las pantallas mas utilizadas en una app estandár.
+
+:white_check_mark: Splash Screen
 
 :white_check_mark: Pantalla de autenticación
 
@@ -11,16 +17,12 @@ que entiendo son básicos para una app que deba mantener listado, formulario, lo
 
 :white_check_mark: Formulario de ingreso
 
-:white_check_mark:Perfil de usuario
+:white_check_mark: Perfil de usuario
 
-
- ## Proyectos para principiantes
-![Aquí](https://github.com/tinoper/miflutterapp/tree/kiss_version) se puede obtener una versión extremadamente simple de una estructura que cubre
- las características anteriormente comentadas.
+Por más detalles de lo que abarca la aplicación podemos ver el articulo en .medium.....TODO
 
 ## Proyecto estándar
 Aquí ya se incluyen directamente una serie de paquetes seleccionados para cubrir las características base del proyecto.
-Como esto es un trabajo en construcción paso a listar lo implementado y por implementar.
 
   :white_check_mark: Estructura de carpetas
  
@@ -34,15 +36,10 @@ Como esto es un trabajo en construcción paso a listar lo implementado y por imp
 
   :white_check_mark: Splash Screen
 
-❎ formz
 
-❎ flutter_bloc
-
-❎ Testing
-
-❎ Traducciones
-
-❎ Flavors
+ ## Proyectos para principiantes
+![Aquí](https://github.com/tinoper/miflutterapp/tree/kiss_version) se puede obtener una versión extremadamente simple de una estructura que cubre
+ las características anteriormente comentadas.
 
 
 ### Contacto
