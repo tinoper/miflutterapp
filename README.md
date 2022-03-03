@@ -22,7 +22,7 @@ El objetivo de este proyecto es servir de apoyo a a charlas, ayudas y pruebas pa
 Por más detalles de lo que abarca la aplicación podemos ver el articulo en .medium.....TODO
 
 ## Proyecto estándar
-Aquí ya se incluyen directamente una serie de paquetes seleccionados para cubrir las características base del proyecto.
+El proyecto contiene una estructura de carpetas y algunos paquetes seleccionados para cubrir las características base del proyecto.
 
   :white_check_mark: Estructura de carpetas
  
@@ -37,14 +37,10 @@ Aquí ya se incluyen directamente una serie de paquetes seleccionados para cubri
   :white_check_mark: Splash Screen
 
 
- ## Proyectos para principiantes
-![Aquí](https://github.com/tinoper/miflutterapp/tree/kiss_version) se puede obtener una versión extremadamente simple de una estructura que cubre
- las características anteriormente comentadas.
+Por más info pueden encontrar ![el post de este proyecto en medium](https://tinoper.medium.com/aplicaci%C3%B3n-flutter-elemental-fd9240b63a0)
 
 
-### Contacto
-TW/washsar
-WWW/ResponsiveHelp.com
+![washsar](http://i.imgur.com/tXSoThF.png) /washsar
 
 
 
