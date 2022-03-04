@@ -40,7 +40,5 @@ El proyecto contiene una estructura de carpetas y algunos paquetes seleccionados
 Por más info pueden encontrar ![el post de este proyecto en medium](https://tinoper.medium.com/aplicaci%C3%B3n-flutter-elemental-fd9240b63a0)
 
 
-![washsar](http://i.imgur.com/tXSoThF.png) /washsar
-
 
 
