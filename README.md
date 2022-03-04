@@ -37,8 +37,19 @@ El proyecto contiene una estructura de carpetas y algunos paquetes seleccionados
   :white_check_mark: Splash Screen
 
 
-Por más info pueden encontrar en el siguiente [articulo en medium](https://tinoper.medium.com/aplicaci%C3%B3n-flutter-elemental-fd9240b63a0)
+Por más info pueden encontrar en el siguiente [artículo en medium](https://tinoper.medium.com/aplicaci%C3%B3n-flutter-elemental-fd9240b63a0)
 
 
+<div id="badges">
+   <a href="https://twitter.com/washsar">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+   </a>
+   <a href="https://tinoper.medium.com/">
+    <img src="https://img.shields.io/badge/Medium-black?style=for-the-badge&logo=medium&logoColor=white" alt="Linkedin Badge"/>
+   </a>
+   <a href="https://www.linkedin.com/in/martin-peruchena-brunet/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin Badge"/>
+   </a>
+</div>
 
 
