@@ -19,7 +19,7 @@ El objetivo de este proyecto es servir de apoyo a a charlas, ayudas y pruebas pa
 
 :white_check_mark: Perfil de usuario
 
-Por más detalles de lo que abarca la aplicación podemos ver el articulo en .medium.....TODO
+
 
 ## Proyecto estándar
 El proyecto contiene una estructura de carpetas y algunos paquetes seleccionados para cubrir las características base del proyecto.
@@ -37,7 +37,7 @@ El proyecto contiene una estructura de carpetas y algunos paquetes seleccionados
   :white_check_mark: Splash Screen
 
 
-Por más info pueden encontrar ![el post de este proyecto en medium](https://tinoper.medium.com/aplicaci%C3%B3n-flutter-elemental-fd9240b63a0)
+Por más info pueden encontrar en el siguiente [articulo en medium](https://tinoper.medium.com/aplicaci%C3%B3n-flutter-elemental-fd9240b63a0)
 
 
 
