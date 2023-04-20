@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:miflutterapp/locator.dart';
-import 'package:miflutterapp/routes/router.gr.dart';
 import 'package:miflutterapp/presentation/ui_params/colors.dart';
 import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
 import 'package:miflutterapp/presentation/widgets/rounded_button.dart';
@@ -192,10 +191,10 @@ class _UserProfileState extends State<UserProfile> {
                       SizedBox(
                         height: MiFlutterAppSizes.normalSpace,
                       ),
-                      RoundedButton(
-                        text: "Cerrar sesión",
-                        press: () => _navigateToLogin(),
-                      ),
+                      // RoundedButton(
+                      //   text: "Cerrar sesión",
+                      //   press: () => _navigateToLogin(),
+                      // ),
                     ],
                   ),
                 ),
@@ -207,7 +206,7 @@ class _UserProfileState extends State<UserProfile> {
     );
   }
 
-  _navigateToLogin() {
-    locator<AppRouter>().pushNamed('/');
-  }
+  // _navigateToLogin() {
+  //   locator<AppRouter>().pushNamed('/');
+  // }
 }

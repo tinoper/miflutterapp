@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miflutterapp/locator.dart';
-import 'package:miflutterapp/routes/router.gr.dart';
+
 import 'package:miflutterapp/presentation/widgets/common/app_bar.dart';
 import 'package:miflutterapp/presentation/widgets/rounded_button.dart';
 
@@ -89,11 +89,11 @@ class _FormPlayerState extends State<FormPlayer> {
               RoundedButton(
                 text: 'Ingresar jugador',
                 press: () {
-                  if (_formKey.currentState!.validate()) {
-                    print(
-                        'El jugador ${_nombreController!.text} ha sido ingresado');
-                    _navigateToListPage();
-                  }
+                  // if (_formKey.currentState!.validate()) {
+                  //   print(
+                  //       'El jugador ${_nombreController!.text} ha sido ingresado');
+                  //   _navigateToListPage();
+                  // }
                 },
               ),
             ],
@@ -103,7 +103,7 @@ class _FormPlayerState extends State<FormPlayer> {
     );
   }
 
-  _navigateToListPage() {
-    locator<AppRouter>().pushNamed('/ListPage');
-  }
+  // _navigateToListPage() {
+  //   locator<AppRouter>().pushNamed('/ListPage');
+  // }
 }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:miflutterapp/Repository/players_repository.dart';
 import 'package:miflutterapp/locator.dart';
 import 'package:miflutterapp/models/player.dart';
-import 'package:miflutterapp/routes/router.gr.dart';
 import 'package:miflutterapp/presentation/widgets/common/app_bar.dart';
 import 'package:miflutterapp/presentation/widgets/item_card_player.dart';
 
@@ -23,7 +22,7 @@ class _ListPageState extends State<ListPage> {
           IconButton(
             icon: Icon(Icons.account_circle),
             onPressed: () {
-              _navigateToUserProfile();
+              // _navigateToUserProfile();
             },
           ),
         ],
@@ -36,20 +35,20 @@ class _ListPageState extends State<ListPage> {
           },
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(
-          Icons.add,
-        ),
-        onPressed: () => _navigateToFormPlayer(),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   child: Icon(
+      //     Icons.add,
+      //   ),
+      //   onPressed: () => _navigateToFormPlayer(),
+      // ),
     );
   }
 
-  void _navigateToUserProfile() {
-    locator<AppRouter>().pushNamed('/UserProfile');
-  }
+  // void _navigateToUserProfile() {
+  //   locator<AppRouter>().pushNamed('/UserProfile');
+  // }
 
-  void _navigateToFormPlayer() {
-    locator<AppRouter>().pushNamed('/FormPlayer');
-  }
+  // void _navigateToFormPlayer() {
+  //   locator<AppRouter>().pushNamed('/FormPlayer');
+  // }
 }
