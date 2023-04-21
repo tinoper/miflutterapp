@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:miflutterapp/presentation/player_list/view/player_list_page.dart';
 
 import '../../ui_params/miflutterapp_sizes.dart';
-import '../../widgets/rounded_input_field.dart';
-import '../../widgets/rounded_password_field.dart';
+import '../../shared/rounded_button.dart';
+import '../../shared/rounded_input_field.dart';
+import '../../shared/rounded_password_field.dart';
 
 class SignUpPage extends StatelessWidget {
+  static const name = 'signup';
+
   const SignUpPage({super.key});
 
   @override
@@ -16,6 +18,9 @@ class SignUpPage extends StatelessWidget {
     final TextTheme textTheme = Theme.of(context).textTheme;
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      // appBar: AppBar(
+      //   title: Text('Signup'),
+      // ),
       body: Container(
         width: double.infinity,
         height: size.height,
@@ -53,27 +58,16 @@ class SignUpPage extends StatelessWidget {
               SizedBox(
                 height: MiFlutterAppSizes.normalSpace,
               ),
-              // RoundedButton(
-              //   text: "LOGIN",
-              //   press: () => _navigateToListPage(),
-              // ),
-              SizedBox(height: size.height * 0.03),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Don’t have an Account ? ",
-                  ),
-                  GestureDetector(
-                    onTap: () => context.pushNamed('signup'),
-                    child: Text(
-                      "Sign Up",
-                      style: textTheme.bodyText2?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
+              RoundedButton(
+                text: "SIGNUP",
+                press: () => context.goNamed(PlayerListPage.name),
+              ),
+              SizedBox(
+                height: MiFlutterAppSizes.normalSpace,
+              ),
+              RoundedButton(
+                text: "LOGIN",
+                press: () => context.pop(),
               ),
             ],
           ),

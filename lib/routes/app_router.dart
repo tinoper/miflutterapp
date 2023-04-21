@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:miflutterapp/presentation/player_list/view/player_list_page.dart';
 
+import '../presentation/error/view/error_page.dart';
 import '../presentation/login/view/view.dart';
 import '../presentation/signup/view/view.dart';
+import '../presentation/user_profile/view/view.dart';
 
 class AppRouter {
   final GoRouter _router;
@@ -10,39 +13,31 @@ class AppRouter {
   AppRouter()
       : _router = GoRouter(
           navigatorKey: GlobalKey<NavigatorState>(),
-          // TODO: add error page
-          // errorBuilder: (context, state) => ErrorPage(
-          //   errormsg: state.error.toString(),
-          // ),
+          errorBuilder: (context, state) => ErrorPage(
+            errorMessage: state.error.toString(),
+          ),
           initialLocation: "/login",
           routes: [
             GoRoute(
-              name: "login",
+              name: LoginPage.name,
               path: "/login",
               builder: (context, state) => LoginPage(),
             ),
-            // GoRoute(
-            //   name: "home",
-            //   path: "/",
-            //   builder: (context, state) => const ServerListPage(),
-            // ),
             GoRoute(
-              name: "signup",
+              name: SignUpPage.name,
               path: "/signup",
               builder: (context, state) => const SignUpPage(),
             ),
-            // GoRoute(
-            //   name: "user_profile",
-            //   path: "/user_profile",
-            //   builder: (context, state) => const UserProfilePage(),
-            // ),
-            // GoRoute(
-            //   name: "server_details",
-            //   path: "/server_details/:fqdn",
-            //   builder: (context, state) => ServerDetailsPage(
-            //     fqdn: state.params["fqdn"]!,
-            //   ),
-            // ),
+            GoRoute(
+              name: PlayerListPage.name,
+              path: "/player-list",
+              builder: (context, state) => const PlayerListPage(),
+            ),
+            GoRoute(
+              name: UserProfilePage.name,
+              path: "/user-profile",
+              builder: (context, state) => const UserProfilePage(),
+            ),
           ],
         );
 

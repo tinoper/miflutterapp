@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:miflutterapp/locator.dart';
+import 'package:miflutterapp/presentation/player_list/view/player_list_page.dart';
+import 'package:miflutterapp/presentation/signup/view/view.dart';
 import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
-import 'package:miflutterapp/presentation/widgets/rounded_button.dart';
-import 'package:miflutterapp/presentation/widgets/rounded_input_field.dart';
-import 'package:miflutterapp/presentation/widgets/rounded_password_field.dart';
-import 'package:miflutterapp/routes/app_router.dart';
+import 'package:miflutterapp/presentation/shared/rounded_button.dart';
+import 'package:miflutterapp/presentation/shared/rounded_input_field.dart';
+import 'package:miflutterapp/presentation/shared/rounded_password_field.dart';
 
 class LoginPage extends StatelessWidget {
+  static const name = 'login';
+
   @override
   Widget build(BuildContext context) {
     final TextTheme textTheme = Theme.of(context).textTheme;
@@ -44,10 +46,10 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: MiFlutterAppSizes.normalSpace,
               ),
-              // RoundedButton(
-              //   text: "LOGIN",
-              //   press: () => _navigateToListPage(),
-              // ),
+              RoundedButton(
+                text: "LOGIN",
+                press: () => context.goNamed(PlayerListPage.name),
+              ),
               SizedBox(height: size.height * 0.03),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -56,7 +58,7 @@ class LoginPage extends StatelessWidget {
                     "Don’t have an Account ? ",
                   ),
                   GestureDetector(
-                    onTap: () => context.pushNamed('signup'),
+                    onTap: () => context.pushNamed(SignUpPage.name),
                     child: Text(
                       "Sign Up",
                       style: textTheme.bodyText2?.copyWith(
@@ -72,8 +74,4 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
-
-  // _navigateToListPage() {
-  //   locator<AppRouter>().pushNamed('/ListPage');
-  // }
 }

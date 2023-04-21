@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:miflutterapp/locator.dart';
-
-import 'package:miflutterapp/presentation/widgets/common/app_bar.dart';
-import 'package:miflutterapp/presentation/widgets/rounded_button.dart';
+import 'package:miflutterapp/presentation/shared/common/app_bar.dart';
+import 'package:miflutterapp/presentation/shared/rounded_button.dart';
 
 class FormPlayer extends StatefulWidget {
   @override
@@ -102,8 +100,4 @@ class _FormPlayerState extends State<FormPlayer> {
       ),
     );
   }
-
-  // _navigateToListPage() {
-  //   locator<AppRouter>().pushNamed('/ListPage');
-  // }
 }

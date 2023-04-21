@@ -1,17 +1,20 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:miflutterapp/locator.dart';
+import 'package:go_router/go_router.dart';
+import 'package:miflutterapp/presentation/login/view/view.dart';
 import 'package:miflutterapp/presentation/ui_params/colors.dart';
 import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
-import 'package:miflutterapp/presentation/widgets/rounded_button.dart';
+import 'package:miflutterapp/presentation/shared/rounded_button.dart';
 
-class UserProfile extends StatefulWidget {
+class UserProfilePage extends StatefulWidget {
+  static const name = 'user-profile';
+
+  const UserProfilePage({super.key});
+
   @override
-  _UserProfileState createState() => _UserProfileState();
+  _UserProfilePageState createState() => _UserProfilePageState();
 }
 
-class _UserProfileState extends State<UserProfile> {
+class _UserProfilePageState extends State<UserProfilePage> {
   List<String> genderList = ['Masculino', 'Femenino', 'No binario'];
   String _gender = '';
   double tempMargin = 0;
@@ -21,10 +24,8 @@ class _UserProfileState extends State<UserProfile> {
     final TextTheme textTheme = Theme.of(context).textTheme;
     Size size = MediaQuery.of(context).size;
     tempMargin = size.width * 0.098;
-    print('40 en ${size.width} es ${size.width * 0.098}');
-    print(
-        'alto de la pantalla es${size.height} y alto de la tarjeta es ${size.height / 3.5}');
     return Scaffold(
+      appBar: AppBar(title: Text('User Profile')),
       body: SafeArea(
         child: Container(
           height: size.height,
@@ -180,8 +181,6 @@ class _UserProfileState extends State<UserProfile> {
                                 val,
                                 style: TextStyle(
                                   color: MiFlutterAppColors.fontColor,
-                                  //fontWeight: FontWeight.w100,
-                                  //fontSize: MiFlutterAppSizes.t3,
                                 ),
                               ),
                             ),
@@ -191,10 +190,10 @@ class _UserProfileState extends State<UserProfile> {
                       SizedBox(
                         height: MiFlutterAppSizes.normalSpace,
                       ),
-                      // RoundedButton(
-                      //   text: "Cerrar sesión",
-                      //   press: () => _navigateToLogin(),
-                      // ),
+                      RoundedButton(
+                        text: "Cerrar sesión",
+                        press: () => context.goNamed(LoginPage.name),
+                      ),
                     ],
                   ),
                 ),
@@ -205,8 +204,4 @@ class _UserProfileState extends State<UserProfile> {
       ),
     );
   }
-
-  // _navigateToLogin() {
-  //   locator<AppRouter>().pushNamed('/');
-  // }
 }

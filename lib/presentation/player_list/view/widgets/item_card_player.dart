@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:miflutterapp/models/player.dart';
+import 'package:miflutterapp/presentation/player_list/models/player.dart';
 import 'package:miflutterapp/presentation/ui_params/colors.dart';
 import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
 

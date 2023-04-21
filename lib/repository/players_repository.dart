@@ -1,4 +1,4 @@
-import 'package:miflutterapp/models/player.dart';
+import 'package:miflutterapp/presentation/player_list/models/player.dart';
 
 final List<Player> playersData = [
   Player(1, "Nadal", "Rafael", 0, 'player_avatar.png', '', 1, 0),
