@@ -13,7 +13,6 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextTheme textTheme = Theme.of(context).textTheme;
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
@@ -24,7 +23,6 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               SizedBox(height: size.height * 0.08),
-              SizedBox(height: size.height * 0.03),
               SvgPicture.asset(
                 "assets/icons/login.svg",
                 height: size.height * 0.35,
@@ -61,8 +59,8 @@ class LoginPage extends StatelessWidget {
                     onTap: () => context.pushNamed(SignUpPage.name),
                     child: Text(
                       "Sign Up",
-                      style: textTheme.bodyText2?.copyWith(
-                        fontWeight: FontWeight.bold,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),

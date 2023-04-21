@@ -90,8 +90,9 @@ class _UserProfilePageState extends State<UserProfilePage> {
                         child: TextFormField(
                           controller: TextEditingController(text: "12/07/1987"),
                           decoration: InputDecoration(
-                            labelStyle: TextStyle(
-                                color: MiFlutterAppColors.primaryColor),
+                            // labelStyle: TextStyle(
+                            //   color: MiFlutterAppColors.primaryColor,
+                            // ),
                             labelText: 'Fecha de nacimiento',
                           ),
                           readOnly: true,
@@ -106,8 +107,8 @@ class _UserProfilePageState extends State<UserProfilePage> {
                           controller: TextEditingController(
                               text: "rfernandez86@gmail.com"),
                           decoration: InputDecoration(
-                            labelStyle: TextStyle(
-                                color: MiFlutterAppColors.primaryColor),
+                            // labelStyle: TextStyle(
+                            //     color: MiFlutterAppColors.primaryColor),
                             labelText: 'Email',
                           ),
                           readOnly: true,
@@ -122,8 +123,8 @@ class _UserProfilePageState extends State<UserProfilePage> {
                           controller:
                               TextEditingController(text: "+598 2424 5858"),
                           decoration: InputDecoration(
-                            labelStyle: TextStyle(
-                                color: MiFlutterAppColors.primaryColor),
+                            // labelStyle: TextStyle(
+                            //     color: MiFlutterAppColors.primaryColor),
                             labelText: 'Teléfono',
                           ),
                           readOnly: true,
@@ -142,9 +143,9 @@ class _UserProfilePageState extends State<UserProfilePage> {
                           ),
                           //filled: true,
                           hintStyle: TextStyle(
-                            color: MiFlutterAppColors.fontColor,
-                            fontFamily: 'DIN_NEXT_ROUNDED_LT_W01',
-                            fontWeight: FontWeight.w100,
+                            // color: MiFlutterAppColors.fontColor,
+                            // fontFamily: 'DIN_NEXT_ROUNDED_LT_W01',
+                            // fontWeight: FontWeight.w100,
                             fontSize:
                                 MiFlutterAppSizes.miFlutterAppHintTextSize,
                           ),
@@ -160,11 +161,11 @@ class _UserProfilePageState extends State<UserProfilePage> {
                             child: Text(
                               "Seleccione una opción",
                               style: TextStyle(
-                                color: MiFlutterAppColors.primaryColor,
-                                // fontFamily: 'DIN_NEXT_ROUNDED_LT_W01',
-                                // fontWeight: FontWeight.w100,
-                                // fontSize: MiFlutterAppSizes.t3,
-                              ),
+                                  //color: MiFlutterAppColors.primaryColor,
+                                  // fontFamily: 'DIN_NEXT_ROUNDED_LT_W01',
+                                  // fontWeight: FontWeight.w100,
+                                  // fontSize: MiFlutterAppSizes.t3,
+                                  ),
                             ),
                           ),
                         ),
@@ -180,8 +181,8 @@ class _UserProfilePageState extends State<UserProfilePage> {
                               child: Text(
                                 val,
                                 style: TextStyle(
-                                  color: MiFlutterAppColors.fontColor,
-                                ),
+                                    //color: MiFlutterAppColors.fontColor,
+                                    ),
                               ),
                             ),
                           );

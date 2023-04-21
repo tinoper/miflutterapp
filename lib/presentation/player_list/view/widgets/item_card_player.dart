@@ -26,9 +26,11 @@ Widget buildPlayer(Player player) {
                   width: MiFlutterAppSizes.playerRankingSpace,
                   child: Text(
                     player.singlesRank.toString(),
+                    // REMOVE
                     style: TextStyle(
-                        fontSize: MiFlutterAppSizes.t3,
-                        color: MiFlutterAppColors.primaryColor),
+                      fontSize: MiFlutterAppSizes.t3,
+                      //color: MiFlutterAppColors.primaryColor,
+                    ),
                     softWrap: true,
                   ),
                 ),
@@ -47,7 +49,9 @@ Widget buildPlayer(Player player) {
                   child: Container(
                     child: Text(
                       player.lastName + ", " + player.firstName,
-                      style: TextStyle(fontSize: MiFlutterAppSizes.t3),
+                      style: TextStyle(
+                        fontSize: MiFlutterAppSizes.t3,
+                      ),
                     ),
                   ),
                 ),
@@ -61,7 +65,9 @@ Widget buildPlayer(Player player) {
                 ),
                 Text(
                   'Último resultado: 6-2 6-3 ',
-                  style: TextStyle(fontSize: MiFlutterAppSizes.t7),
+                  style: TextStyle(
+                    fontSize: MiFlutterAppSizes.t7,
+                  ),
                 ),
               ],
             ),

@@ -17,17 +17,14 @@ class RoundedPasswordField extends StatelessWidget {
       child: TextField(
         obscureText: true,
         onChanged: onChanged,
-        cursorColor: MiFlutterAppColors.primaryColor,
         decoration: InputDecoration(
           hintText:
               isConfirmationPassword ? "Confirmation Password" : "Password",
           icon: Icon(
             Icons.lock,
-            color: MiFlutterAppColors.primaryColor,
           ),
           suffixIcon: Icon(
             Icons.visibility,
-            color: MiFlutterAppColors.primaryColor,
           ),
           border: InputBorder.none,
         ),

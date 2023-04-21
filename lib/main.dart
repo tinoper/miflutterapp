@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:miflutterapp/presentation/ui_params/my_app_theme.dart';
+import 'config/theme/app_theme.dart';
 import 'routes/app_router.dart';
 
 void main() {
@@ -11,13 +11,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final _router = AppRouter();
 
+    final AppTheme appBarTheme = AppTheme();
+
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routeInformationProvider: _router.router.routeInformationProvider,
       routeInformationParser: _router.router.routeInformationParser,
       routerDelegate: _router.router.routerDelegate,
       title: 'MiFlutterApp',
-      theme: buildMyAppTheme(),
+      // theme: buildMyAppTheme(),
+      theme: appBarTheme.getTheme(),
     );
   }
 }

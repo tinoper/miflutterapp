@@ -19,16 +19,15 @@ class RoundedInputField extends StatelessWidget {
     return TextFieldContainer(
       child: TextField(
         onChanged: onChanged,
-        cursorColor: MiFlutterAppColors.primaryColor,
+        //cursorColor: MiFlutterAppColors.primaryColor,
         decoration: InputDecoration(
           icon: Icon(
             icon,
-            color: MiFlutterAppColors.primaryColor,
+            // color: MiFlutterAppColors.primaryColor,
           ),
           hintText: hintText,
           border: InputBorder.none,
         ),
-        //Style->TextTheme.subtitle1 but Color doesn't works
       ),
     );
   }

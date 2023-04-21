@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:miflutterapp/presentation/ui_params/colors.dart';
 import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
 
@@ -21,14 +20,7 @@ class RoundedButton extends StatelessWidget {
     return Container(
       height: MiFlutterAppSizes.normalButtonHeight,
       width: MiFlutterAppSizes.normalButtonWidth,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          elevation: MiFlutterAppSizes.normalElevation,
-          shape: new RoundedRectangleBorder(
-            borderRadius:
-                new BorderRadius.circular(MiFlutterAppSizes.borderRadiusButton),
-          ),
-        ),
+      child: FilledButton(
         onPressed: press,
         child: Text(
           text,
