@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:miflutterapp/presentation/shared/common/app_bar.dart';
 import 'package:miflutterapp/presentation/shared/rounded_button.dart';
 
 class FormPlayer extends StatefulWidget {
@@ -28,8 +27,8 @@ class _FormPlayerState extends State<FormPlayer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MiAppBar(
-        title: 'Ingreso de jugadores',
+      appBar: AppBar(
+        title: Text('Ingreso de jugadores'),
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(20, 20, 20, 40),

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:miflutterapp/presentation/login/view/view.dart';
-import 'package:miflutterapp/presentation/ui_params/colors.dart';
-import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
-import 'package:miflutterapp/presentation/shared/rounded_button.dart';
+import 'package:miflutterapp/presentation/user_profile/view/widgets/custom_card_profile.dart';
+import 'package:miflutterapp/presentation/user_profile/view/widgets/photo_profile.dart';
+import 'package:miflutterapp/presentation/user_profile/view/widgets/user_data_profile.dart';
+import '../../../config/utils.dart';
 
 class UserProfilePage extends StatefulWidget {
   static const name = 'user-profile';
@@ -15,15 +14,11 @@ class UserProfilePage extends StatefulWidget {
 }
 
 class _UserProfilePageState extends State<UserProfilePage> {
-  List<String> genderList = ['Masculino', 'Femenino', 'No binario'];
-  String _gender = '';
-  double tempMargin = 0;
-
   @override
   Widget build(BuildContext context) {
-    final TextTheme textTheme = Theme.of(context).textTheme;
+    final colors = Theme.of(context).colorScheme;
     Size size = MediaQuery.of(context).size;
-    tempMargin = size.width * 0.098;
+
     return Scaffold(
       appBar: AppBar(title: Text('User Profile')),
       body: SafeArea(
@@ -31,174 +26,16 @@ class _UserProfilePageState extends State<UserProfilePage> {
           height: size.height,
           child: Stack(
             children: [
-              //Tarjeta de color con bordes
-              Container(
-                height: size.height / 3.5,
-                decoration: BoxDecoration(
-                  color: MiFlutterAppColors.primaryColor,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(
-                        MiFlutterAppSizes.borderRadiusProfileCard),
-                    bottomRight: Radius.circular(
-                        MiFlutterAppSizes.borderRadiusProfileCard),
-                  ),
-                ),
-                child: FittedBox(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: tempMargin),
-                    child: Text(
-                      'Raúl Fernandez',
-                      style: textTheme.headline4,
-                    ),
-                  ),
-                ),
+              CustomCardProfile(
+                size: size,
+                colors: colors,
+                userName: userProfileName,
               ),
-              //Text Name
-              //Avatar
-              Positioned(
-                width: size.width,
-                top: (size.height / 5),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    CircleAvatar(
-                      //TODO mantener relación con el resto del diseño
-                      radius: MiFlutterAppSizes.avatarProfilePage,
-                      backgroundImage: NetworkImage(
-                          'https://images.unsplash.com/photo-1541647376583-8934aaf3448a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80'),
-                    ),
-                  ],
-                ),
+              PhotoProfile(
+                size: size,
+                photo: photoProfilePath,
               ),
-              //Formulario con datos
-              Positioned(
-                top: (size.height / 3),
-                left: size.width * 0.098,
-                right: size.width * 0.098,
-                child: Form(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      SizedBox(
-                        height: MiFlutterAppSizes.normalSpace,
-                      ),
-                      SizedBox(
-                        height: MiFlutterAppSizes.normalSpace,
-                      ),
-                      Container(
-                        width: size.width,
-                        child: TextFormField(
-                          controller: TextEditingController(text: "12/07/1987"),
-                          decoration: InputDecoration(
-                            // labelStyle: TextStyle(
-                            //   color: MiFlutterAppColors.primaryColor,
-                            // ),
-                            labelText: 'Fecha de nacimiento',
-                          ),
-                          readOnly: true,
-                        ),
-                      ),
-                      SizedBox(
-                        height: MiFlutterAppSizes.normalSpace,
-                      ),
-                      Container(
-                        width: size.width,
-                        child: TextFormField(
-                          controller: TextEditingController(
-                              text: "rfernandez86@gmail.com"),
-                          decoration: InputDecoration(
-                            // labelStyle: TextStyle(
-                            //     color: MiFlutterAppColors.primaryColor),
-                            labelText: 'Email',
-                          ),
-                          readOnly: true,
-                        ),
-                      ),
-                      SizedBox(
-                        height: MiFlutterAppSizes.normalSpace,
-                      ),
-                      Container(
-                        width: size.width,
-                        child: TextFormField(
-                          controller:
-                              TextEditingController(text: "+598 2424 5858"),
-                          decoration: InputDecoration(
-                            // labelStyle: TextStyle(
-                            //     color: MiFlutterAppColors.primaryColor),
-                            labelText: 'Teléfono',
-                          ),
-                          readOnly: true,
-                        ),
-                      ),
-                      SizedBox(
-                        height: MiFlutterAppSizes.normalSpace,
-                      ),
-                      DropdownButtonFormField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(
-                                  MiFlutterAppSizes.borderRadiusButton),
-                            ),
-                          ),
-                          //filled: true,
-                          hintStyle: TextStyle(
-                            // color: MiFlutterAppColors.fontColor,
-                            // fontFamily: 'DIN_NEXT_ROUNDED_LT_W01',
-                            // fontWeight: FontWeight.w100,
-                            fontSize:
-                                MiFlutterAppSizes.miFlutterAppHintTextSize,
-                          ),
-                          fillColor: Colors.white,
-                        ),
-                        isExpanded: true,
-                        //isDense: true,
-                        //isDense: height > width ? false : true,
-                        //itemHeight: height > width ? height * 0.03 : 0,
-                        hint: Align(
-                          alignment: Alignment.center,
-                          child: FittedBox(
-                            child: Text(
-                              "Seleccione una opción",
-                              style: TextStyle(
-                                  //color: MiFlutterAppColors.primaryColor,
-                                  // fontFamily: 'DIN_NEXT_ROUNDED_LT_W01',
-                                  // fontWeight: FontWeight.w100,
-                                  // fontSize: MiFlutterAppSizes.t3,
-                                  ),
-                            ),
-                          ),
-                        ),
-                        onChanged: (String? newValue) {
-                          setState(() {
-                            _gender = newValue!;
-                          });
-                        },
-                        items: genderList.map((String val) {
-                          return DropdownMenuItem(
-                            value: val,
-                            child: Center(
-                              child: Text(
-                                val,
-                                style: TextStyle(
-                                    //color: MiFlutterAppColors.fontColor,
-                                    ),
-                              ),
-                            ),
-                          );
-                        }).toList(),
-                      ),
-                      SizedBox(
-                        height: MiFlutterAppSizes.normalSpace,
-                      ),
-                      RoundedButton(
-                        text: "Cerrar sesión",
-                        press: () => context.goNamed(LoginPage.name),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              UserDataProfile(),
             ],
           ),
         ),

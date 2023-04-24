@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
       routeInformationParser: _router.router.routeInformationParser,
       routerDelegate: _router.router.routerDelegate,
       title: 'MiFlutterApp',
-      // theme: buildMyAppTheme(),
       theme: appBarTheme.getTheme(),
     );
   }

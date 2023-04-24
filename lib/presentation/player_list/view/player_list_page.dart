@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:miflutterapp/Repository/players_repository.dart';
-import 'package:miflutterapp/presentation/shared/common/app_bar.dart';
-import 'package:miflutterapp/presentation/player_list/view/widgets/item_card_player.dart';
+import 'package:miflutterapp/presentation/player_list/view/view.dart';
 import 'package:miflutterapp/presentation/user_profile/view/view.dart';
 
 class PlayerListPage extends StatefulWidget {
@@ -20,9 +19,9 @@ class _PlayerListPageState extends State<PlayerListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MiAppBar(
-        title: 'Players',
-        menuItem: [
+      appBar: AppBar(
+        title: Text('Players'),
+        actions: [
           IconButton(
             icon: Icon(Icons.account_circle),
             onPressed: () => context.pushNamed(UserProfilePage.name),

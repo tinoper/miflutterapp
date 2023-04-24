@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:miflutterapp/presentation/ui_params/colors.dart';
 import 'text_field_container.dart';
 
 class RoundedInputField extends StatelessWidget {
@@ -19,11 +17,9 @@ class RoundedInputField extends StatelessWidget {
     return TextFieldContainer(
       child: TextField(
         onChanged: onChanged,
-        //cursorColor: MiFlutterAppColors.primaryColor,
         decoration: InputDecoration(
           icon: Icon(
             icon,
-            // color: MiFlutterAppColors.primaryColor,
           ),
           hintText: hintText,
           border: InputBorder.none,

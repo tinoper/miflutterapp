@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:miflutterapp/presentation/player_list/view/player_list_page.dart';
+import 'package:miflutterapp/presentation/player_list/view/view.dart';
 import 'package:miflutterapp/presentation/signup/view/view.dart';
 import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
 import 'package:miflutterapp/presentation/shared/rounded_button.dart';
