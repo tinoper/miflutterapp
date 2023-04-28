@@ -1,79 +1,80 @@
 import 'package:flutter/material.dart';
-import 'package:miflutterapp/presentation/player_list/models/player.dart';
-import 'package:miflutterapp/presentation/ui_params/colors.dart';
-import 'package:miflutterapp/presentation/ui_params/miflutterapp_sizes.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:miflutterapp/presentation/player_list/cubit/player_list_cubit.dart';
 
-//TODO change to class
-Widget buildPlayer(Player player) {
-  return GestureDetector(
-    onTap: () {
-      print('Ir al perfil de ${player.lastName}');
-    },
-    onLongPress: () {
-      print('Ofrecer borrar el item de ${player.lastName}');
-    },
-    child: Card(
-      elevation: MiFlutterAppSizes.playerCardElevation,
-      child: Padding(
-        padding: const EdgeInsets.all(MiFlutterAppSizes.playerCardPadding),
-        child: Column(
-          children: [
-            Row(
-              children: <Widget>[
-                /// playerRanking
-                Container(
-                  alignment: Alignment.center,
-                  width: MiFlutterAppSizes.playerRankingSpace,
-                  child: Text(
-                    player.singlesRank.toString(),
-                    // REMOVE
-                    style: TextStyle(
-                      fontSize: MiFlutterAppSizes.t3,
-                      //color: MiFlutterAppColors.primaryColor,
-                    ),
-                    softWrap: true,
-                  ),
-                ),
+import '../../../ui_params/miflutterapp_sizes.dart';
+import '../../models/player.dart';
 
-                /// playerPhoto
-                CircleAvatar(
-                  radius: MiFlutterAppSizes.avatar5,
-                  backgroundImage: AssetImage('assets/images/${player.image}'),
-                ),
-                SizedBox(
-                  width: MiFlutterAppSizes.smallSpace * 2,
-                ),
+class ItemCardPlayer extends StatelessWidget {
+  const ItemCardPlayer({super.key, required this.player});
 
-                /// playerName
-                Expanded(
-                  child: Container(
+  final Player player;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        print('Ir al perfil de ${player.lastName}');
+      },
+      onLongPress: () {
+        context.read<PlayerListCubit>().removePlayer(player.id);
+      },
+      child: Card(
+        elevation: MiFlutterAppSizes.playerCardElevation,
+        child: Padding(
+          padding: const EdgeInsets.all(MiFlutterAppSizes.playerCardPadding),
+          child: Column(
+            children: [
+              Row(
+                children: <Widget>[
+                  Container(
+                    alignment: Alignment.center,
+                    width: MiFlutterAppSizes.playerRankingSpace,
                     child: Text(
-                      player.lastName + ", " + player.firstName,
+                      player.singlesRank.toString(),
                       style: TextStyle(
                         fontSize: MiFlutterAppSizes.t3,
                       ),
+                      softWrap: true,
                     ),
                   ),
-                ),
-              ],
-            ),
-            //Otros datos
-            Row(
-              children: [
-                SizedBox(
-                  width: MiFlutterAppSizes.spaceLeftLastScorePlayerCard,
-                ),
-                Text(
-                  'Último resultado: 6-2 6-3 ',
-                  style: TextStyle(
-                    fontSize: MiFlutterAppSizes.t7,
+                  CircleAvatar(
+                    radius: MiFlutterAppSizes.avatar5,
+                    backgroundImage:
+                        AssetImage('assets/images/${player.image}'),
                   ),
-                ),
-              ],
-            ),
-          ],
+                  SizedBox(
+                    width: MiFlutterAppSizes.smallSpace * 2,
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        player.lastName + ", " + player.firstName,
+                        style: TextStyle(
+                          fontSize: MiFlutterAppSizes.t3,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: MiFlutterAppSizes.spaceLeftLastScorePlayerCard,
+                  ),
+                  Text(
+                    'Último resultado: 6-2 6-3 ',
+                    style: TextStyle(
+                      fontSize: MiFlutterAppSizes.t7,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
