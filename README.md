@@ -13,6 +13,10 @@ This is a work in progress that I hope to be able to share with everyone soon.
 
 ## Clean Code
 
+✅ Repository
+
+✅ Service
+
 
 ## Packages
 
