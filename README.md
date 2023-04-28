@@ -20,11 +20,17 @@ This is a work in progress that I hope to be able to share with everyone soon.
 
 ✅ Fonts ->  [Google Fonts](https://pub.dev/packages/google_fonts)
 
-✅ Materia Design 3 -> [Material Design 3](https://m3.material.io/)
+✅ Material Design 3 -> [Material Design 3](https://m3.material.io/)
+
+✅ flutter_bloc -> [Flutter Bloc Library](https://bloclibrary.dev)
+
 
 
 ## What's next...
 
+- [ ] Medium Article
+- [ ] Add Player
+- [ ] SnackBar widget
 
 
 <div id="badges">
