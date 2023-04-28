@@ -24,3 +24,5 @@ doc/api/
 /screenshots/
 *.pbxproj
 android/.idea/workspace.xml
+.flutter-plugins
+.flutter-plugins-dependencies
