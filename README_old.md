@@ -1,8 +1,8 @@
+# Actualización2023
+
 # MiFlutterApp
  
-Es una consulta reiterada en los grupos de Flutter sobre como estructurar un proyecto sobre todo 
-al principio en los primeros proyectos. Por eso este proyecto va a mantener algunas propuestas 
-para esos casos de primeros proyectos.
+Es una consulta reiterada en los grupos de Flutter sobre como estructurar un proyecto sobre todo al principio en los primeros proyectos. Por eso este proyecto va a mantener algunas propuestas para esos casos de primeros proyectos.
 
 El objetivo de este proyecto es servir de apoyo a a charlas, ayudas y pruebas para la comunidad de Flutter.
  
