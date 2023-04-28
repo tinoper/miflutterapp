@@ -14,7 +14,11 @@ This is a work in progress that I hope to be able to share with everyone soon.
 
 ## Packages
 
-go_router
+✅ Navigator 2.0	-> [go_router](https://pub.dev/packages/go_router)
+
+✅ Fonts ->  [Google Fonts](https://pub.dev/packages/google_fonts)
+
+
 
 
 
