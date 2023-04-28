@@ -11,6 +11,8 @@ Almost three years after its first version, it continues to be a frequently aske
 
 This is a work in progress that I hope to be able to share with everyone soon.
 
+## Clean Code
+
 
 ## Packages
 
@@ -18,7 +20,10 @@ This is a work in progress that I hope to be able to share with everyone soon.
 
 ✅ Fonts ->  [Google Fonts](https://pub.dev/packages/google_fonts)
 
+✅ Materia Design 3 -> [Material Design 3](https://m3.material.io/)
 
+
+## What's next...
 
 
 
