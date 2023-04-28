@@ -21,7 +21,7 @@ class CustomLoading extends StatelessWidget {
       ),
       child: const Center(
         child: CircularProgressIndicator(
-          color: Colors.white,
+          color: MiFlutterAppColors.primaryColor,
         ),
       ),
     );

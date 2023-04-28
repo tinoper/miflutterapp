@@ -30,7 +30,7 @@ class PlayerListCubit extends Cubit<PlayerListState> {
 
     List<Player> newPlayers = _databaseRepository.removerPlayer(id);
 
-    Future.delayed(Duration(milliseconds: 1500));
+    Future.delayed(Duration(milliseconds: 2000));
 
     emit(
       state.copyWith(

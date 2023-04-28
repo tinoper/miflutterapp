@@ -16,8 +16,8 @@ class ItemCardPlayer extends StatelessWidget {
       onTap: () {
         print('Ir al perfil de ${player.lastName}');
       },
-      onLongPress: () {
-        context.read<PlayerListCubit>().removePlayer(player.id);
+      onLongPress: () async {
+        await context.read<PlayerListCubit>().removePlayer(player.id);
       },
       child: Card(
         elevation: MiFlutterAppSizes.playerCardElevation,
