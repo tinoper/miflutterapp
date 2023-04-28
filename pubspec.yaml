@@ -16,6 +16,7 @@ dependencies:
   go_router: ^6.0.8
   google_fonts: ^4.0.3
   flutter_bloc: ^8.1.2
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:

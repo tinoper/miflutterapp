@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:miflutterapp/presentation/user_profile/view/widgets/custom_card_profile.dart';
 import 'package:miflutterapp/presentation/user_profile/view/widgets/photo_profile.dart';
 import 'package:miflutterapp/presentation/user_profile/view/widgets/user_data_profile.dart';
-import '../../../config/utils.dart';
+import '../../../config/constants.dart';
 
 class UserProfilePage extends StatefulWidget {
   static const name = 'user-profile';

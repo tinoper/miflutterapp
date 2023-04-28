@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../config/utils.dart';
+import '../../../../config/constants.dart';
 import '../../../shared/rounded_button.dart';
 import '../../../ui_params/miflutterapp_sizes.dart';
 
