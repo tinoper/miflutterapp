@@ -1,7 +1,8 @@
-
-																		🇪🇸 [ES](https://github.com/tinoper/miflutterapp/blob/update_2023/README_es.md)
-
-																		🇺🇸 [EN](https://github.com/tinoper/miflutterapp/blob/update_2023/README.md)
+																		
+[![🇪🇸 ES](https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/flag-spain_1f1ea-1f1f8.png)](https://github.com/tinoper/miflutterapp/blob/update_2023/README_es.md)
+																		
+[![🇺🇸 EN](https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/flag-united-states_1f1fa-1f1f8.png)](https://github.com/tinoper/miflutterapp/blob/update_2023/README.md)
+													
 																		
 
 # UPDATE 2023
