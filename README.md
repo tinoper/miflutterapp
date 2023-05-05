@@ -9,7 +9,6 @@
 
 Almost three years after its first version, it continues to be a frequently asked question in the community, particularly by those who are new to Flutter and want to know how to start or structure a project. I have chosen to update this solution that falls somewhere between the basic "Hello World" and some more elaborate starter projects that may be too complex for beginners to tackle right away.
 
-This is a work in progress that I hope to be able to share with everyone soon.
 
 ## Clean Code
 
@@ -42,5 +41,10 @@ This is a work in progress that I hope to be able to share with everyone soon.
    </a>
 </div>
 
+
+
+## What´s next?
+
+While I feel tempted to expand on this example, I understand that there's no point in reinventing the wheel. If you already understand this minimalist structure, then I can recommend examples like VGV's with <a href='https://cli.vgv.dev/' alt='VeryGoodCli'>VeryGoodCli</a>. It's a collection of templates that already include more features such as internationalization, flavors, logging, etc.
 
 
