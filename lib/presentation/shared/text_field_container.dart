@@ -13,7 +13,6 @@ class TextFieldContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      //margin: EdgeInsets.symmetric(vertical: 10),
       padding: EdgeInsets.symmetric(
         horizontal: MiFlutterAppSizes.normalInputFieldPadding,
       ),

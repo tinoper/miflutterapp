@@ -13,9 +13,7 @@ class ItemCardPlayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        print('Ir al perfil de ${player.lastName}');
-      },
+      onTap: () {},
       onLongPress: () async {
         await context.read<PlayerListCubit>().removePlayer(player.id);
       },

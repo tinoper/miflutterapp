@@ -85,13 +85,7 @@ class _FormPlayerState extends State<FormPlayer> {
               ),
               RoundedButton(
                 text: 'Ingresar jugador',
-                press: () {
-                  // if (_formKey.currentState!.validate()) {
-                  //   print(
-                  //       'El jugador ${_nombreController!.text} ha sido ingresado');
-                  //   _navigateToListPage();
-                  // }
-                },
+                press: () {},
               ),
             ],
           ),

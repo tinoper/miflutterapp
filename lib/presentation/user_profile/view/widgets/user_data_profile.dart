@@ -88,11 +88,7 @@ class UserDataProfile extends StatelessWidget {
                   ),
                 ),
               ),
-              onChanged: (String? newValue) {
-                // setState(() {
-                //   _gender = newValue!;
-                // });
-              },
+              onChanged: (String? newValue) {},
               items: genderList.map((String val) {
                 return DropdownMenuItem(
                   value: val,
@@ -110,9 +106,7 @@ class UserDataProfile extends StatelessWidget {
             ),
             RoundedButton(
               text: "Cerrar sesión",
-              press: () {
-                print('Close Session');
-              },
+              press: () {},
             ),
           ],
         ),

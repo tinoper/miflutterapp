@@ -13,6 +13,7 @@ class MiFlutterAppSizes {
   static const double t3 = 24;
   static const double t5 = 16;
   static const double t7 = 12;
+
   //Icon Sizes
   static const double iconSize = 24;
 
