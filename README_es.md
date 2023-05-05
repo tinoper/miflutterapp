@@ -9,16 +9,11 @@ Casi tres años despues de su primer versión sigue siendo una consulta recurren
 He decidido actualizar esta solución que se ubica entre el "Hello World" y algunos proyectos 
 de inicio muchos mas completos que este pero también mas complejos de asimilar al inicio.
 
-Esto es un trabajo en progreso que espero dentro de poco poder compartir con todos.
-
-
-
 ## Código Limpio
 
 ✅ Repository
 
 ✅ Service
-
 
 
 ## Paquetes utilizados
@@ -44,3 +39,11 @@ Esto es un trabajo en progreso que espero dentro de poco poder compartir con tod
     <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/linkedinlogox100.png" alt="Linkedin Badge"/>
    </a>
 </div>
+
+
+
+
+## ¿Qué hay después de esto?
+
+Si bien me siento tentado a hacer crecer este ejemplo entiendo que de nada sirve inventar la rueda. Si esta minimalista estructura
+ya la tienes entendida, entonces puedo recomendarte ejemplos como el de VGV con <a href="https://cli.vgv.dev/" alt="VeryGoodCli">VeryGoodCli</a>. Se trata de una colección de templates que ya contienen más características como internacionalización, flavors, logging, etc
