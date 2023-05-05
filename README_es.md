@@ -12,19 +12,33 @@ de inicio muchos mas completos que este pero también mas complejos de asimilar 
 Esto es un trabajo en progreso que espero dentro de poco poder compartir con todos.
 
 
-## Paquetes utilizados
+## Clean Code
 
-go_router
+✅ Repository
+
+✅ Service
+
+
+## Packages
+
+✅ Navigator 2.0	-> [go_router](https://pub.dev/packages/go_router)
+
+✅ Fonts ->  [Google Fonts](https://pub.dev/packages/google_fonts)
+
+✅ Material Design 3 -> [Material Design 3](https://m3.material.io/)
+
+✅ flutter_bloc -> [Flutter Bloc Library](https://bloclibrary.dev)
+
 
 
 <div id="badges">
    <a href="https://twitter.com/washsar">
-    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/twitterlogox100.png" alt="Twitter Badge"/>
    </a>
    <a href="https://tinoper.medium.com/">
-    <img src="https://img.shields.io/badge/Medium-black?style=for-the-badge&logo=medium&logoColor=white" alt="Linkedin Badge"/>
+    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/mediumlogox100.png" alt="Linkedin Badge"/>
    </a>
    <a href="https://www.linkedin.com/in/martin-peruchena-brunet/">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin Badge"/>
+    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/linkedinlogox100.png" alt="Linkedin Badge"/>
    </a>
 </div>
