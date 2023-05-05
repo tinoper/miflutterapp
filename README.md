@@ -29,23 +29,15 @@ This is a work in progress that I hope to be able to share with everyone soon.
 ✅ flutter_bloc -> [Flutter Bloc Library](https://bloclibrary.dev)
 
 
-
-## What's next...
-
-- [ ] Medium Article
-- [ ] Add Player
-- [ ] SnackBar widget
-
-
 <div id="badges">
    <a href="https://twitter.com/washsar">
-    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/twitterlogo.png" alt="Twitter Badge"/>
    </a>
    <a href="https://tinoper.medium.com/">
-    <img src="https://img.shields.io/badge/Medium-black?style=for-the-badge&logo=medium&logoColor=white" alt="Linkedin Badge"/>
+    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/mediumlogo.png" alt="Linkedin Badge"/>
    </a>
    <a href="https://www.linkedin.com/in/martin-peruchena-brunet/">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin Badge"/>
+    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/linkedinlogo.png" alt="Linkedin Badge"/>
    </a>
 </div>
 
