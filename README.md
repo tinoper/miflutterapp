@@ -31,13 +31,13 @@ This is a work in progress that I hope to be able to share with everyone soon.
 
 <div id="badges">
    <a href="https://twitter.com/washsar">
-    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/twitterlogo.png" alt="Twitter Badge"/>
+    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/twitterlogox100.png" alt="Twitter Badge"/>
    </a>
    <a href="https://tinoper.medium.com/">
-    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/mediumlogo.png" alt="Linkedin Badge"/>
+    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/mediumlogox100.png" alt="Linkedin Badge"/>
    </a>
    <a href="https://www.linkedin.com/in/martin-peruchena-brunet/">
-    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/linkedinlogo.png" alt="Linkedin Badge"/>
+    <img src="https://github.com/tinoper/miflutterapp/blob/master/assets/images/linkedinlogox100.png" alt="Linkedin Badge"/>
    </a>
 </div>
 
