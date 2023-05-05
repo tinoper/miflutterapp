@@ -12,14 +12,16 @@ de inicio muchos mas completos que este pero también mas complejos de asimilar 
 Esto es un trabajo en progreso que espero dentro de poco poder compartir con todos.
 
 
-## Clean Code
+
+## Código Limpio
 
 ✅ Repository
 
 ✅ Service
 
 
-## Packages
+
+## Paquetes utilizados
 
 ✅ Navigator 2.0	-> [go_router](https://pub.dev/packages/go_router)
 
